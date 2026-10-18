@@ -1,0 +1,834 @@
+/* AcademicHistoryPage.module.css */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.headerIcon {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-top: 5px;
+}
+
+.headerContent {
+  flex: 1;
+}
+
+.headerContent h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.applicantInfo {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+.applicationBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.badge {
+  background: #FFD700;
+  color: #8B4513;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Styles */
+.section {
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section:hover {
+  background: #fafafa;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+.sectionHeader i {
+  font-size: 1.5rem;
+  color: #8B4513;
+  background: #faf5f0;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.sectionHeader h2 {
+  color: #2c3e50;
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.sectionContent {
+  margin-top: 20px;
+}
+
+/* Form Grid */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroupFullWidth {
+  grid-column: 1 / -1;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.required::after {
+  content: " *";
+  color: #dc3545;
+}
+
+/* Form Elements */
+.input, .select, .textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  width: 100%;
+  font-family: inherit;
+  background: white;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: #8B4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  transform: translateY(-1px);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Radio Group */
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.radioOption:hover {
+  background: #f8f9fa;
+  border-color: #e9ecef;
+}
+
+.radioOption input[type="radio"] {
+  margin: 0;
+}
+
+.radioLabel {
+  font-weight: normal;
+  color: #495057;
+}
+
+/* Subjects Section */
+.subjectsSection {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.subjectsSection h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.sectionHelp {
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Subject Management Header */
+.sectionHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.addSubjectButton {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.addSubjectButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+}
+
+.addSubjectButton:active {
+  transform: translateY(0);
+}
+
+/* Subject Rows */
+.subjectRow {
+  display: grid;
+  grid-template-columns: 150px 1fr 200px auto;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.subjectRow:hover {
+  background: #f1f3f4;
+  border-color: #8B4513;
+  transform: translateX(5px);
+}
+
+.subjectLevel {
+  display: flex;
+  align-items: center;
+}
+
+.levelBadge {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(139, 69, 19, 0.2);
+}
+
+.subjectSelect, .gradeSelect {
+  display: flex;
+  flex-direction: column;
+}
+
+.subjectActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeSubject {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+}
+
+.removeSubject:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Subject Statistics */
+.subjectStats {
+  margin-top: 1.5rem;
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 12px;
+  border-left: 4px solid #2196f3;
+  text-align: center;
+}
+
+.subjectStats p {
+  margin: 0;
+  font-size: 1rem;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.helpText {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Upload Sections */
+.uploadSection {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.uploadSection h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.uploadHelp {
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.uploadArea {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.uploadLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border: 2px dashed #8B4513;
+  border-radius: 12px;
+  background: #faf5f0;
+  color: #8B4513;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.uploadLabel:hover {
+  background: #f0e6d6;
+  border-color: #654321;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 69, 19, 0.1);
+}
+
+.uploadLabel i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.uploadLabel span {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.uploadLabel small {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.uploadedFiles {
+  margin-top: 20px;
+}
+
+.uploadedFiles h5 {
+  color: #495057;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.fileItem:hover {
+  border-color: #8B4513;
+  transform: translateX(5px);
+}
+
+.fileItem i {
+  color: #8B4513;
+  font-size: 1.2rem;
+}
+
+.fileName {
+  flex: 1;
+  font-weight: 600;
+  color: #495057;
+}
+
+.fileSize {
+  color: #6c757d;
+  font-size: 0.85rem;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.removeFile {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeFile:hover {
+  background: #f8d7da;
+  transform: scale(1.1);
+}
+
+.uploadTips {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.uploadTips h6 {
+  color: #856404;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.uploadTips ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #856404;
+}
+
+.uploadTips li {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+/* Tertiary Qualifications */
+.tertiaryQualifications {
+  margin-top: 20px;
+}
+
+.qualificationCard {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.qualificationCard:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cardHeader h4 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.removeButton {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.removeButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.addButton {
+  background: transparent;
+  color: #8B4513;
+  border: 2px dashed #8B4513;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  transition: all 0.3s;
+  width: 100%;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.addButton:hover {
+  background: #8B4513;
+  color: white;
+  border-style: solid;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.2);
+}
+
+/* Error Messages */
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: #f8d7da;
+  border-radius: 6px;
+  border-left: 4px solid #dc3545;
+}
+
+/* Action Buttons */
+.actions {
+  padding: 30px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dee2e6;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btnBack {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+}
+
+.btnBack:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #495057 100%);
+  transform: translateX(-5px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(135deg, #654321 0%, #4a2f1a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .subjectRow {
+    grid-template-columns: 140px 1fr 180px auto;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+  
+  .applicationBadge {
+    position: static;
+    align-self: center;
+    margin-top: 10px;
+  }
+  
+  .applicantInfo {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .subjectRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+  
+  .subjectActions {
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .sectionHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .addSubjectButton {
+    align-self: stretch;
+    justify-content: center;
+  }
+  
+  .radioGroup {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .removeButton {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 10px;
+  }
+  
+  .container {
+    border-radius: 15px;
+  }
+  
+  .header,
+  .section {
+    padding: 20px 15px;
+  }
+  
+  .headerContent h1 {
+    font-size: 1.8rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 1.4rem;
+  }
+  
+  .qualificationCard {
+    padding: 20px 15px;
+  }
+  
+  .subjectRow {
+    padding: 12px;
+  }
+  
+  .uploadLabel {
+    padding: 30px 15px;
+  }
+  
+  .uploadLabel i {
+    font-size: 2rem;
+  }
+  
+  .fileItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .fileItem .removeFile {
+    align-self: flex-end;
+  }
+}
+
+/* Animation for new elements */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subjectRow, .qualificationCard, .fileItem {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Focus states for accessibility */
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible,
+.btn:focus-visible,
+.addSubjectButton:focus-visible,
+.removeSubject:focus-visible {
+  outline: 2px solid #8B4513;
+  outline-offset: 2px;
+}

@@ -1,0 +1,556 @@
+/* EnrolmentPage.css */
+.enrolment-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.enrolment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Section */
+.enrolment-header {
+  background: linear-gradient(135deg, #003366 0%, #0066CC 100%);
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  color: #FF6600;
+  margin-top: 5px;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.notice {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #FF6600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.application-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.badge {
+  background: #FF6600;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Section Styles */
+.enrolment-section {
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.enrolment-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+.section-header i {
+  font-size: 1.5rem;
+  color: #0066CC;
+}
+
+.section-header h2 {
+  color: #2c3e50;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.section-content {
+  margin-top: 20px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #dc3545;
+}
+
+/* Form Elements */
+input, select, textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  width: 100%;
+  font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0066CC;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.read-only {
+  background: #f8f9fa;
+  color: #6c757d;
+  border-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.date-display {
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  color: #6c757d;
+}
+
+.help-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* Error States */
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Success States */
+.form-group.success input,
+.form-group.success select,
+.form-group.success textarea {
+  border-color: #28a745;
+}
+
+/* Enhanced Checkbox Styles */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #495057;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s;
+  margin: 10px 0;
+}
+
+.checkbox-label:hover {
+  background: #e9ecef;
+  border-color: #0066CC;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+/* Custom Checkmark */
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6c757d;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background: #0066CC;
+  border-color: #0066CC;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Physical Address Section */
+.physical-address-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  margin-top: 15px;
+  grid-column: 1 / -1;
+}
+
+.section-subheader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.section-subheader i {
+  font-size: 1.2rem;
+  color: #28a745;
+}
+
+.section-subheader h3 {
+  color: #495057;
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Copy Address Button */
+.btn-copy-address {
+  background: transparent;
+  color: #0066CC;
+  border: 2px solid #0066CC;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  width: auto;
+}
+
+.btn-copy-address:hover {
+  background: #0066CC;
+  color: white;
+}
+
+/* Next of Kin Section */
+.next-of-kin-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.next-of-kin-section:hover {
+  border-color: #0066CC;
+}
+
+.next-of-kin-section .section-header {
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.next-of-kin-section .section-header h4 {
+  color: #495057;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.btn-remove {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+.btn-remove:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.btn-add-kin {
+  background: transparent;
+  color: #0066CC;
+  border: 2px dashed #0066CC;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  transition: all 0.3s;
+  width: 100%;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.btn-add-kin:hover {
+  background: #0066CC;
+  color: white;
+  border-style: solid;
+}
+
+/* Animation for conditional sections */
+.conditional-section {
+  animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+  }
+}
+
+/* Action Buttons */
+.enrolment-actions {
+  padding: 30px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dee2e6;
+}
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-back {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-back:hover {
+  background: #545b62;
+  transform: translateX(-2px);
+}
+
+.btn-primary {
+  background: #28a745;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Loading State */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enrolment-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .application-badge {
+    position: static;
+    align-self: center;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .enrolment-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .next-of-kin-section {
+    padding: 15px;
+  }
+  
+  .next-of-kin-section .section-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .physical-address-section {
+    padding: 15px;
+  }
+  
+  .section-subheader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .btn-copy-address {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .enrolment-page {
+    padding: 10px;
+  }
+  
+  .enrolment-container {
+    border-radius: 10px;
+  }
+  
+  .enrolment-header,
+  .enrolment-section {
+    padding: 20px;
+  }
+  
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .section-subheader h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .enrolment-page {
+    background: white;
+    padding: 0;
+  }
+  
+  .enrolment-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .btn, .enrolment-actions {
+    display: none;
+  }
+}
